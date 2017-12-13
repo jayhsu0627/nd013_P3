@@ -77,21 +77,21 @@ My final model is basicaly the LeNet architecture, except it has a 43 classes ou
 ![lenet](./ref/lenet.png "LeNet")
 It consisted of the following layers:
 
-| Layer         		|     Description	        					| 
+| Layer               		|     Description	                         					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Greyscale image   					| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 28x28x6 	|
-| RELU					| Activation			     					|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6               	|
-| Convolution 3x3	    | 1x1 stride, same padding, outputs 10x10x16  	|
-| RELU					| Activation			     					|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x16               	|
-| Flattern   	      	| outputs 400                                	|
-| Fully connected		| outputs 120  									|
-| RELU					| Activation			     					|
-| Fully connected		| outputs 84  									|
-| RELU					| keep_prob = 0.5			     				|
-| Fully connected		| outputs 43 									|
+| Input               		| 32x32x1 Greyscale image   																				| 
+| Convolution 3x3      	| 1x1 stride, same padding, outputs 28x28x6    	|
+| RELU				             	| Activation			     																												|
+| Max pooling	         	| 2x2 stride,  outputs 14x14x6               	  |
+| Convolution 3x3	      | 1x1 stride, same padding, outputs 10x10x16  	 |
+| RELU					             | Activation			     																												|
+| Max pooling	      	   | 2x2 stride,  outputs 5x5x16               	   |
+| Flattern   	      	   | outputs 400                                	  |
+| Fully connected		     | outputs 120  																																	|
+| RELU			             		| Activation			     																									   |
+| Fully connected		     | outputs 84  																													     | 
+| RELU					             | keep_prob = 0.5			     																				   |
+| Fully connected		     | outputs 43 																												      	|
 
 
 
@@ -150,19 +150,19 @@ The 10th image might be difficult to classify because the arrow in it may have d
 The code for making predictions on my final model is located in the **46th** cell of the Ipython notebook.
 Here are the results of the prediction:
 
-| Image			                        |     Prediction                     	| Bool  			| 
-|:---------------------:|:---------------------------------------------:| 
+| Image			                              |     Prediction                       	| Bool   	| 
+|:-------------------------------------:|:-------------------------------------:|:-------:| 
 | Right-of-way at the next intersection | Right-of-way at the next intersection	| True				| 
-| Roundabout mandatory    		    	| Roundabout mandatory 	    			| True				|
-| Speed limit (30km/h)					| Speed limit (30km/h)					| True				|
-| End of all speed and passing limits	| End of all speed and passing limits	| True	        	|
-| Slippery Road	                 		| Slippery Road                         | True       		|
-| Priority road      	             	| Priority road                         | True				| 
-| Beware of ice/snow  		            | Beware of ice/snow	                | True       		|
-| No vehicles						    | No vehicles					        | True   			|
-| End of all speed and passing limits   | End of all speed and passing limits   | True	     		|
-| Speed limit (30km/h)					| Speed limit (30km/h) 				    | True	 			|
-| Keep right				     		| Keep right 							| True   			|
+| Roundabout mandatory    		           	| Roundabout mandatory          	    			| True				|
+| Speed limit (30km/h)				             	| Speed limit (30km/h)             					| True	 		|
+| End of all speed and passing limits	  | End of all speed and passing limits	  | True	  	|
+| Slippery Road	                 		     | Slippery Road                         | True  		|
+| Priority road      	             	    | Priority road                         | True				| 
+| Beware of ice/snow  		                | Beware of ice/snow	                   | True  		|
+| No vehicles						                     | No vehicles					                      | True  		|
+| End of all speed and passing limits   | End of all speed and passing limits   | True	 		|
+| Speed limit (30km/h)					             | Speed limit (30km/h) 				             | True	  	|
+| Keep right				     		                 | Keep right                     							| True   	|
 
 The model was able to correctly guess 9 of the 10 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 87.4%.
 
@@ -170,9 +170,9 @@ The model was able to correctly guess 9 of the 10 traffic signs, which gives an 
 
 The following image indicates that all input picture has been correctly recognized. The description in picture defined as:
 
-| |Input| Top guess: Class number(Probabilities)|2nd guess: Class number(Probabilities)|3rd guess: Class number(Probabilities)|4th guess: Class number(Probabilities)|5th guess: Class number(Probabilities)| 
-|:---------------------:|:---------------------------------------------:| 
-|Examplep|Right-of-way at the next intersection| Right-of-way at the next intersection|Beware of ice/snow|Double curve|Children crossing|Speed limit (20km/h)|
+|        |Input                                | Top guess: Class number(Probabilities)|2nd guess: Class number(Probabilities)|3rd guess: Class number(Probabilities)|4th guess: Class number(Probabilities)|5th guess: Class number(Probabilities)| 
+|:------:|:-----------------------------------:|:-------------------------------------:|:------------------------------------:|:-----------------------------------------:|:------------------------------------:|:------------------------------------:| 
+|Example |Right-of-way at the next intersection| Right-of-way at the next intersection |Beware of ice/snow                    |Double curve                             |Children crossing                     |Speed limit (20km/h)                  |
 
 ![alt text](./ref/5th_softmax.png)
 ### (Optional) Visualizing the Neural Network
