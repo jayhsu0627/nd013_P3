@@ -80,7 +80,7 @@ For details about how I created the training data, see the next section.
 
 The overall strategy for deriving a model architecture was to giving enougth training data.
 
-My first step was to use a convolution neural network model similar to the NVIDIA Architecture I thought this model might be appropriate because it's been proven by a real car!
+My first step was to use a convolution neural network model similar to the NVIDIA Architecture I thought this model might be appropriate because it's been proven by a real car!<br>
 ![Nvidia][image9]
 The layers of Nvidia net has 5 convolution layers, however, it's too big for our project, so I change it into 3 convolution layers.
 
@@ -97,31 +97,31 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 The final model architecture (model.py lines 56-64) consisted of a convolution neural network with the following layers and layer sizes:
 2D Convolution(5 x 5 filter, 2 x 2 sub-sample) + 2D Convolution(5 x 5 filter, 2 x 2 sub-sample) + Flatten+Dense(60)+Dense(42)+Dense(1)
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)<br>
 
-![Model Architecture][image8]
+![Model Architecture][image8]<br>
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:<br>
 
-![320 x 160 x 3][image2]
+![320 x 160 x 3][image2]<br>
 
 Since my first trial is not success in the region of red line cornering, so a record and append more data on that region. 
 
-After the collection process, I had 2155 number of data points. I then preprocessed this data by resize, crop and flip:
-![320 x 160 x 3][image4]
-center
-![320 x 160 x 3][image5]
-left with +0.2 steering angle correction
-![320 x 160 x 3][image6]
-right with -0.2 steering angle correction
-![320 x 160 x 3][image7]
-center Cropped
-![320 x 160 x 3][image10]
-left Cropped
-![320 x 160 x 3][image11]
-right Cropped
+After the collection process, I had 2155 number of data points. I then preprocessed this data by resize, crop and flip:<br>
+![320 x 160 x 3][image4]<br>
+center<br>
+![320 x 160 x 3][image5]<br>
+left with +0.2 steering angle correction<br>
+![320 x 160 x 3][image6]<br>
+right with -0.2 steering angle correction<br>
+![320 x 160 x 3][image7]<br>
+center Cropped<br>
+![320 x 160 x 3][image10]<br>
+left Cropped<br>
+![320 x 160 x 3][image11]<br>
+right Cropped<br>
 ```
 images = []
 measurements = []
@@ -149,8 +149,8 @@ for line in lines:
     measurements.append(steering_left)
     measurements.append(steering_right)
 ```
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-![alt text][image3]
+To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:<br>
+![alt text][image3]<br>
 ```
 augmented_images, augmented_measurements = [],[]
 for image, measurement in zip(images, measurements):
